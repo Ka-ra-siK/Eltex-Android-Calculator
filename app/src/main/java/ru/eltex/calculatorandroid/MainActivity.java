@@ -101,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
             if (String.valueOf(out.getText()) != "") {
                 firstNum = Float.valueOf(String.valueOf(out.getText()));
                 lastOperation = "+";
-                operationView.setText(operationView.getText() + String.valueOf(firstNum) + "+");
+                operationView.setText(operationView.getText() + String.valueOf(firstNum));
+                operationView.setText(format.format(Float.valueOf(String.valueOf(operationView.getText()))));
+                operationView.setText(operationView.getText() + "+");
                 out.setText("");
             }
 
@@ -111,7 +113,9 @@ public class MainActivity extends AppCompatActivity {
             if (String.valueOf(out.getText()) != "") {
                 firstNum = Float.valueOf(String.valueOf(out.getText()));
                 lastOperation = "-";
-                operationView.setText(operationView.getText() + String.valueOf(firstNum) + "-");
+                operationView.setText(operationView.getText() + String.valueOf(firstNum));
+                operationView.setText(format.format(Float.valueOf(String.valueOf(operationView.getText()))));
+                operationView.setText(operationView.getText() + "-");
                 out.setText("");
             }
         });
@@ -121,7 +125,9 @@ public class MainActivity extends AppCompatActivity {
             if (String.valueOf(out.getText()) != "") {
                 firstNum = Float.valueOf(String.valueOf(out.getText()));
                 lastOperation = "*";
-                operationView.setText(operationView.getText() + String.valueOf(firstNum) + "*");
+                operationView.setText(operationView.getText() + String.valueOf(firstNum));
+                operationView.setText(format.format(Float.valueOf(String.valueOf(operationView.getText()))));
+                operationView.setText(operationView.getText() + "*");
                 out.setText("");
             }
         });
@@ -131,7 +137,9 @@ public class MainActivity extends AppCompatActivity {
             if (String.valueOf(out.getText()) != "") {
                 firstNum = Float.valueOf(String.valueOf(out.getText()));
                 lastOperation = "/";
-                operationView.setText(operationView.getText() + String.valueOf(firstNum) + "/");
+                operationView.setText(operationView.getText() + String.valueOf(firstNum));
+                operationView.setText(format.format(Float.valueOf(String.valueOf(operationView.getText()))));
+                operationView.setText(operationView.getText() + "/");
                 out.setText("");
             }
         });
